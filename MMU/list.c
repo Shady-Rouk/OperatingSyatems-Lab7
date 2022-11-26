@@ -248,8 +248,6 @@ void list_coalese_nodes(list_t *l) { // pending
   while (current != NULL) {
     if (prev->blk->end + 1 == current->blk->start) {
       prev->blk->end = current->blk->end;
-      // prev->next = current->next;
-      // node_free(current);
     } else {
       prev = current;
       current = current->next;
